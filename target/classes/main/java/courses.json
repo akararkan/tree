@@ -1,0 +1,191 @@
+[
+  {
+    "name": "Calculus 1",
+    "credit": 4,
+    "days": ["Monday", "Sunday"],
+    "startTime": "09:30",
+    "endTime": "11:00",
+    "prerequisites": [],
+    "unlocks": ["Calculus 2", "Physics 1"]
+  },
+  {
+    "name": "Physics 1",
+    "credit": 3,
+    "days": ["Tuesday", "Sunday"],
+    "startTime": "09:30",
+    "endTime": "11:30",
+    "prerequisites": ["Calculus 1"],
+    "unlocks": ["Physics 2"]
+  },
+  {
+    "name": "Calculus 2",
+    "credit": 4,
+    "days": ["Tuesday", "Thursday"],
+    "startTime": "14:30",
+    "endTime": "16:00",
+    "prerequisites": ["Calculus 1"],
+    "unlocks": ["Advanced Calculus", "Differential Equations", "Statistics", "Discrete Structure"]
+  },
+  {
+    "name": "Physics 2",
+    "credit": 3,
+    "days": ["Wednesday", "Saturday"],
+    "startTime": "14:00",
+    "endTime": "15:30",
+    "prerequisites": ["Physics 1"],
+    "unlocks": ["Electronic"]
+  },
+  {
+    "name": "Advanced Calculus",
+    "credit": 3,
+    "days": ["Wednesday", "Saturday"],
+    "startTime": "09:30",
+    "endTime": "11:00",
+    "prerequisites": ["Calculus 2"],
+    "unlocks": []
+  },
+  {
+    "name": "Differential Equations",
+    "credit": 4,
+    "days": ["Saturday", "Sunday"],
+    "startTime": "11:00",
+    "endTime": "12:30",
+    "prerequisites": ["Calculus 2"],
+    "unlocks": []
+  },
+  {
+    "name": "Electronic",
+    "credit": 3,
+    "days": ["Monday", "Thursday"],
+    "startTime": "09:30",
+    "endTime": "11:00",
+    "prerequisites": ["Physics 2"],
+    "unlocks": ["Circuit Analysis"]
+  },
+  {
+    "name": "Circuit Analysis",
+    "credit": 4,
+    "days": ["Tuesday", "Sunday"],
+    "startTime": "10:30",
+    "endTime": "12:00",
+    "prerequisites": ["Electronic"],
+    "unlocks": []
+  },
+  {
+    "name": "Information and Communication Technology",
+    "credit": 4,
+    "days": ["Monday", "Wednesday"],
+    "startTime": "10:30",
+    "endTime": "12:00",
+    "prerequisites": [],
+    "unlocks": ["Programming Concepts & Algorithms", "Computer Logic Design"]
+  },
+  {
+    "name": "Programming Concepts & Algorithms",
+    "credit": 4,
+    "days": ["Tuesday", "Wednesday"],
+    "startTime": "13:00",
+    "endTime": "14:30",
+    "prerequisites": ["Information and Communication Technology"],
+    "unlocks": ["Object Oriented Programming", "Fundamentals of Database Systems"]
+  },
+  {
+    "name": "Object Oriented Programming",
+    "credit": 2,
+    "days": ["Monday"],
+    "startTime": "13:00",
+    "endTime": "14:00",
+    "prerequisites": ["Programming Concepts & Algorithms"],
+    "unlocks": ["Data Structure"]
+  },
+  {
+    "name": "Fundamentals of Database Systems",
+    "credit": 3,
+    "days": ["Thursday", "Wednesday"],
+    "startTime": "14:00",
+    "endTime": "15:30",
+    "prerequisites": ["Programming Concepts & Algorithms"],
+    "unlocks": ["Software Engineering"]
+  },
+  {
+    "name": "Software Engineering",
+    "credit": 4,
+    "days": ["Wednesday", "Saturday"],
+    "startTime": "14:30",
+    "endTime": "16:00",
+    "prerequisites": ["Fundamentals of Database Systems"],
+    "unlocks": ["Artificial Intelligence"]
+  },
+  {
+    "name": "Computer Logic Design",
+    "credit": 3,
+    "days": ["Thursday", "Sunday"],
+    "startTime": "13:30",
+    "endTime": "15:00",
+    "prerequisites": ["Information and Communication Technology"],
+    "unlocks": ["COA"]
+  },
+  {
+    "name": "COA",
+    "credit": 3,
+    "days": ["Monday", "Thursday"],
+    "startTime": "13:00",
+    "endTime": "14:30",
+    "prerequisites": ["Computer Logic Design"],
+    "unlocks": ["MicroProcessor", "Computer Communication & Network", "Operating System", "Computer System Design"]
+  },
+  {
+    "name": "MicroProcessor",
+    "credit": 3,
+    "days": ["Wednesday", "Thursday"],
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "prerequisites": ["COA"],
+    "unlocks": ["Introduction to Embedded System"]
+  },
+  {
+    "name": "Computer Communication & Network",
+    "credit": 4,
+    "days": ["Wednesday", "Saturday"],
+    "startTime": "14:30",
+    "endTime": "16:00",
+    "prerequisites": ["COA"],
+    "unlocks": ["Computer Networking Design & Analysis"]
+  },
+  {
+    "name": "Operating System",
+    "credit": 4,
+    "days": ["Wednesday", "Saturday"],
+    "startTime": "14:30",
+    "endTime": "16:00",
+    "prerequisites": ["COA"],
+    "unlocks": ["Computer Security"]
+  },
+  {
+    "name": "Computer Security",
+    "credit": 4,
+    "days": ["Wednesday", "Saturday"],
+    "startTime": "14:30",
+    "endTime": "16:00",
+    "prerequisites": ["Operating System"],
+    "unlocks": []
+  },
+  {
+    "name": "Introduction to Embedded System",
+    "credit": 4,
+    "days": ["Wednesday", "Saturday"],
+    "startTime": "14:30",
+    "endTime": "16:00",
+    "prerequisites": ["MicroProcessor"],
+    "unlocks": []
+  },
+  {
+    "name": "Artificial Intelligence",
+    "credit": 4,
+    "days": ["Wednesday", "Saturday"],
+    "startTime": "14:30",
+    "endTime": "16:00",
+    "prerequisites": ["Software Engineering"],
+    "unlocks": []
+  }
+]
