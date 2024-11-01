@@ -78,35 +78,34 @@ public class Main {
             allLists.add(new ArrayList<>(currentSet));
         }
 
-        // Print all possible lists and their total credits
+        allLists.removeIf(list -> calculateTotalCredits(list) < 10);
         for (List<Course> list : allLists) {
-            if (calculateTotalCredits(list) >= 10) {
-                System.out.println("List: " + list);
-                System.out.println("Total Credits: " + calculateTotalCredits(list));
-                int uniqueDays = numOfDays(list);
-                System.out.println("All Days of the week: " + uniqueDays);
-                System.out.println(calculateTimeRest(list));
-                System.out.println("Conflicts: " + findTimeConflicts(list));
+            System.out.println("List: " + list);
+            System.out.println("Total Credits: " + calculateTotalCredits(list));
+            int uniqueDays = numOfDays(list);
+            System.out.println("All Days of the week: " + uniqueDays);
+            System.out.println(calculateTimeRest(list));
+            System.out.println("Conflicts: " + findTimeConflicts(list));
 
-                // Count the number of unique unlocked courses
-                Set<String> unlockedCourses = new HashSet<>();
-                for (Course course : list) {
-                    unlockedCourses.add(String.valueOf(course.getUnlocks()));
-                }
-
-                // Print the number of unique unlocked courses
-                System.out.println("Number Of Unlock Courses: " + unlockedCourses.size());
+            // Count the number of unique unlocked courses
+            Set<String> unlockedCourses = new HashSet<>();
+            for (Course course : list) {
+                unlockedCourses.add(String.valueOf(course.getUnlocks()));
             }
+            System.out.println("Number Of Unlock Courses: " + unlockedCourses.size());
         }
-
+        // Step 2: Score and rank each of the 8 lists using chooseBestCourseList
         List<Pair<List<Course>, Integer>> scoredLists = chooseBestCourseList(allLists);
 
-        // Print all lists from best to worst
-        System.out.println("\nCourse Lists from Best to Worst:");
-        for (Pair<List<Course>, Integer> scoredList : scoredLists) {
-            System.out.println("List: " + scoredList.getKey());
-            System.out.println("Score: " + scoredList.getValue());
+        // Step 3: Print the sorted lists with their scores
+        System.out.println("\nSorted Course Lists by Score:");
+        for (int i = 0; i < scoredLists.size(); i++) {
+            Pair<List<Course>, Integer> entry = scoredLists.get(i);
+            System.out.println("Rank " + (i + 1) + ": " + entry.getKey());
+            System.out.println("Score: " + entry.getValue());
         }
+
+
 
     }
 
